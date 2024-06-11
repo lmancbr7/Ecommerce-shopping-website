@@ -96,6 +96,22 @@ body::-webkit-scrollbar-thumb:hover{ background: hsl(0, 0%, 70%); }
 /* REUSED STYLE */
 .container{ padding: 0 15px; }
 
+.has-scrollbar{ padding-bottom: 5px; }
+
+.has-scrollbar::-webkit-scrollbar{
+    width: 12px; /* for vertical scroll */ 
+    height: 12px; /* for horizontal scroll */ 
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb{
+    background: transparent;
+    border: 3px solid var(--white);
+    border-radius: 20px;
+}
+
+.has-scrollbar:hover::-webkit-scrollbar-thumb{ background: hsl(0, 0%, 90%); }
+.has-scrollbar::-webkit-scrollbar-thumb:hover{ background: hsl(0, 0%, 80%); }
+
 /* MAIN */
 /* overlay */
 .overlay{
@@ -393,4 +409,73 @@ body::-webkit-scrollbar-thumb:hover{ background: hsl(0, 0%, 70%); }
     line-height: 1;
     padding: 2px 4px;
     border-radius: 20px;
+}
+
+.mobile-navigation-menu{
+    background: var(--white);
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    max-width: 320px;
+    height: 100vh;
+    padding: 20px;
+    box-shadow: 0 0 10px hsl(0, 0%, 0%, 0.1);
+    overflow-y: scroll;
+    overscroll-behavior: contain;
+    visibility: hidden;
+    /*transition: 0.5s ease;*/
+    z-index: 20;
+}
+
+.mobile-navigation-menu.active{
+    left: 0;
+    visibility: visible;
+}
+
+.menu-top{
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--cultured);
+}
+
+.menu-top .menu-title{
+    color: var(--salmon-pink);
+    font-size: var(--fs-4);
+    font-weight: var(--weight-600);
+}
+
+.menu-close-btn{
+    color: var(--eerie-black);
+    font-size: 22px;
+}
+
+.menu-close-btn ion-icon{ --ionicon-stroke-width: 50px; }
+
+.mobile-menu-category-list{ margin-bottom: 30px; }
+
+.menu-category .accordion-menu{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-menu-category-list .menu-category{ border-bottom: 1px solid var(--cultured); }
+
+.mobile-menu-category-list .menu-title{
+    color: var(--onyx);
+    font-size: var(--fs-6);
+    font-weight: var(--weight-500);
+    padding: 12px 0;
+}
+
+.accordion-menu > div{ font-size: 14px; }
+
+.accordion-menu ion-icon{
+    color: var(--onyx);
+    --ionicon-stroke-width: 90px;
 }

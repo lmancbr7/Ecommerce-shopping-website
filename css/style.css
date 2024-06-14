@@ -605,3 +605,17 @@ body::-webkit-scrollbar-thumb:hover{ background: hsl(0, 0%, 70%); }
 }
 
 .banner-text{ display: none; }
+
+.banner-btn{
+    background: var(--salmon-pink);
+    color: var(--white);
+    width: max-content;
+    font-size: var(--fs-11);
+    font-weight: var(--weight-600);
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: var(--border-radius-sm);
+    transition: var(--transition-timing);
+}
+
+.banner-btn:hover{ background: var(--eerie-black); }

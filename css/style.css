@@ -1140,7 +1140,7 @@ body::-webkit-scrollbar-thumb:hover{ background: hsl(0, 0%, 70%); }
 
 .product-grid .showcase-badge.angle{
     top: 8px;
-    left: -20px;
+    left: -29px;
     transform: rotate(-45deg);
     text-transform: uppercase;
     font-size: 11px;
@@ -1148,6 +1148,8 @@ body::-webkit-scrollbar-thumb:hover{ background: hsl(0, 0%, 70%); }
 }
 
 .product-grid .showcase-badge.black{ background: var(--eerie-black); }
+
+.product-grid .showcase-badge.pink{ background: var(--salmon-pink); }
 
 .product-grid .showcase-actions{
     position: absolute;
